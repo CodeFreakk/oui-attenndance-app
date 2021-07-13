@@ -1,0 +1,161 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Google Fonts Link -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Line Awesome CDN Link -->
+    <link
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+    />
+     </head>
+     <style>
+         * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+          background-color: #e7e4e4;
+        margin: 0;
+        padding: 0;
+      }
+button {
+	background-color: #16d34f;
+	border: 2px solid  #12ad41;
+	border-radius: 4px;
+	color: #fff;
+	display: block;
+	font-family: inherit;
+	font-size: 16px;
+	padding: 10px;
+    margin-bottom: 10px;
+    margin: auto;
+
+	width: 10%;
+}
+
+      .main-container {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      .main-container h2 {
+        margin: 0 0 80px 0;
+        color: #0dc40d;
+        font-size: 30px;
+        font-family: "Raleway", sans-serif;
+        font-weight: 400;
+      }
+
+      .radio-buttons {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .custom-radio input {
+        display: none;
+      }
+
+      .radio-btn {
+        margin: 10px;
+        width: 180px;
+        height: 200px;
+        border: 3px solid transparent;
+        display: inline-block;
+        border-radius: 10px;
+        position: relative;
+        text-align: center;
+        box-shadow: 0 0 20px #c3c3c367;
+        cursor: pointer;
+      }
+
+      .radio-btn > i {
+        color: #ffffff;
+        background-color: #0dc40d;
+        font-size: 20px;
+        position: absolute;
+        top: -15px;
+        left: 50%;
+        transform: translateX(-50%) scale(4);
+        border-radius: 50px;
+        padding: 3px;
+        transition: 0.2s;
+        pointer-events: none;
+        opacity: 0;
+      }
+
+      .radio-btn .hobbies-icon {
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .radio-btn .hobbies-icon i {
+        color:#0dc40d;
+        line-height: 80px;
+        font-size: 60px;
+      }
+
+      .radio-btn .hobbies-icon h3 {
+        color: #0dc40d;
+        font-family: "Raleway", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        text-transform: uppercase;
+      }
+
+      .custom-radio input:checked + .radio-btn {
+        border: 3px solid #0dc40d;
+      }
+
+      .custom-radio input:checked + .radio-btn > i {
+        opacity: 1;
+        transform: translateX(-50%) scale(1);
+      }
+     </style>
+  <body>
+    <div class="main-container">
+      <h2>Get Started</h2>
+      <div class="radio-buttons">
+        
+        <label onclick="window.location='http://127.0.0.1:5500/createclass.htm'" class="custom-radio">
+          <input type="radio" name="radio" />
+          <span class="radio-btn"
+            ><i class="las la-check"></i>
+            <div class="hobbies-icon">
+              <i class="las la-futbol"></i>
+              <h3>Create class</h3>
+            </div>
+          </span>
+        </label>
+        <label onclick="window.location='http://127.0.0.1:5500/existingclass.htm'" class="custom-radio">
+          <input type="radio" name="radio" />
+          <span class="radio-btn"
+            ><i class="las la-check"></i>
+            <div class="hobbies-icon">
+              <i class="las la-table-tennis"></i>
+              <h3>Existing Class</h3>
+            </div>
+          </span>
+        </label>
+        <br><br>
+            
+      </div>
+    </div>
+
+  </body>
+</html>
